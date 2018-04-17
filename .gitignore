@@ -524,3 +524,11 @@ paket-files/
 *.cap
 
 # End of https://www.gitignore.io/api/c,vim,python,windows,visualstudio
+
+# mac
+*.DS_Store
+
+# qtcreator
+*.pro.user
+
+
