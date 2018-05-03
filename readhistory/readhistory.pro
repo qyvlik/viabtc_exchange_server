@@ -6,7 +6,9 @@ TARGET = readhistory.exe
 include(../network.pri);
 include(../utils.pri);
 
-LIBS = -L ../utils -lutils -L ../network -lnetwork -Wl,-Bstatic -lev -ljansson -lmpdec -lmysqlclient -lz -lhiredis -Wl,-Bdynamic -lm -lpthread -ldl
+LIBS += -L/home/yh/project/viabtc_exchange_server/utils -lutils.a
+LIBS += -L/home/yh/project/viabtc_exchange_server/network -lnetwork.a -Wl,-Bstatic
+LIBS += -lev -ljansson -lmpdec -lmysqlclient -lz -lhiredis -Wl,-Bdynamic -lm -lpthread -ldl
 
 HEADERS = \
    $$PWD/rh_config.h \
