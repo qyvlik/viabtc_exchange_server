@@ -48,17 +48,17 @@
         "max_pkg_size": 2000000
     },
     "deals": {
-        "brokers": "127.0.0.1:9092",
+        "brokers": "127.0.0.1:19092",
         "topic": "deals",
         "partition": 0
     },
     "orders": {
-        "brokers": "127.0.0.1:9092",
+        "brokers": "127.0.0.1:19092",
         "topic": "orders",
         "partition": 0
     },
     "balances": {
-        "brokers": "127.0.0.1:9092",
+        "brokers": "127.0.0.1:19092",
         "topic": "balances",
         "partition": 0
     },

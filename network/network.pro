@@ -4,6 +4,7 @@
 CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
+CONFIG += staticlib
 
 TARGET = network
 
