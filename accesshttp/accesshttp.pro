@@ -1,6 +1,10 @@
 # Created by and for Qt Creator. This file was created for editing the project sources only.
 # You may attempt to use it for building too, by modifying this file here.
 
+CONFIG += console
+CONFIG -= app_bundle
+CONFIG -= qt
+
 TARGET = accesshttp.exe
 TEMPLATE = app
 
@@ -24,6 +28,6 @@ INCLUDEPATH = \
 
 DISTFILES = \
    $$PWD/config.json \
-   $$PWD/makefile \
+   $$PWD/_makefile \
    $$PWD/restart.sh
 

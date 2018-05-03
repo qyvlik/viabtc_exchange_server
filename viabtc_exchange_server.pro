@@ -5,14 +5,11 @@
 
 TEMPLATE = subdirs
 
-#include(network/network.pri);
-#include(utils/utils.pri);
-
 SUBDIRS *= \
     accesshttp \
     accessws \
     alertcenter \
-    depends/hiredis \
+#    depends/hiredis \
     marketprice \
     matchengine \
     utils \
@@ -20,5 +17,6 @@ SUBDIRS *= \
 
 DEFINES = \
    $$PWD/LICENSE \
-   $$PWD/README.md
+   $$PWD/README.md \
+   $$PWD/makefile.inc
 

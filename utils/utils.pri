@@ -59,7 +59,9 @@ SOURCES = \
 
 INCLUDEPATH = \
     $$PWD/. \
-    $$PWD/../network
+    $$PWD/../network \
+    /usr/local/opt/openssl/include \
+    /usr/local/include
 
 
 

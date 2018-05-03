@@ -1,10 +1,6 @@
 # Created by and for Qt Creator. This file was created for editing the project sources only.
 # You may attempt to use it for building too, by modifying this file here.
 
-TARGET = network.a
-
-TEMPLATE = lib
-
 HEADERS = \
    $$PWD/nw_buf.h \
    $$PWD/nw_clt.h \
@@ -28,5 +24,6 @@ SOURCES = \
    $$PWD/nw_timer.c
 
 INCLUDEPATH = \
-    $$PWD/.
+    $$PWD/. \
+    /usr/local/include
 

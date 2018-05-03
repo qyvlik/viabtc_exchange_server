@@ -5,7 +5,9 @@ TARGET = utils.a
 
 TEMPLATE = lib
 
+LIBS += -L /usr/local/opt/openssl/ -lssl -L /usr/local/lib -lev
+
 include(./utils.pri)
 
 DISTFILES += \
-    makefile
+    _makefile

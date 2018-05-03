@@ -3,6 +3,10 @@
 
 #TARGET = hiredis
 
+CONFIG += console
+CONFIG -= app_bundle
+CONFIG -= qt
+
 HEADERS = \
    $$PWD/adapters/ae.h \
    $$PWD/adapters/glib.h \
@@ -46,7 +50,7 @@ INCLUDEPATH = \
     $$PWD/examples
 
 DISTFILES = \
-   $$PWD/Makefile \
+   $$PWD/_Makefile \
    $$PWD/CHANGELOG.md \
    $$PWD/COPYING \
    $$PWD/README.md
