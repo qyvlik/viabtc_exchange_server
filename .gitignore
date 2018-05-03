@@ -530,5 +530,7 @@ paket-files/
 
 # qtcreator
 *.pro.user
+*.qmake.stash
+*makefile
 
 
