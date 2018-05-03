@@ -9,8 +9,7 @@ TARGET = accessws.exe
 
 TEMPLATE = app
 
-LIBS += -L$$OUT_PWD/../utils -lutils
-LIBS += -L$$OUT_PWD/../network/ -lnetwork -Wl,-Bstatic
+LIBS += -L$$OUT_PWD/../utils -lutils -L$$OUT_PWD/../network/ -lnetwork -Wl,-Bstatic
 LIBS += -lev -ljansson -lmpdec -lrdkafka -lz -lssl -lcrypto -lhiredis -lcurl -Wl,-Bdynamic -lm -lpthread -ldl
 
 INCLUDEPATH += \

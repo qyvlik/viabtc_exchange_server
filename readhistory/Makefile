@@ -13,7 +13,7 @@ MAKEFILE      = Makefile
 CC            = gcc
 CXX           = g++
 DEFINES       = -DQT_QML_DEBUG
-CFLAGS        = -pipe -g -Wall -W -fPIC $(DEFINES)
+CFLAGS        = -pipe -Wall -Wno-strict-aliasing -Wno-uninitialized -g -rdynamic -std=gnu99 -g -Wall -W -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++11 -Wall -W -fPIC $(DEFINES)
 INCPATH       = -I. -I../network -I../utils -isystem /usr/include/mysql -I. -I../../../Qt5.10.1/5.10.1/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/yh/Qt5.10.1/5.10.1/gcc_64/bin/qmake
@@ -37,7 +37,7 @@ COMPRESS      = gzip -9f
 DISTNAME      = readhistory.exe1.0.0
 DISTDIR = /home/yh/project/viabtc_exchange_server/readhistory/.tmp/readhistory.exe1.0.0
 LINK          = g++
-LFLAGS        = 
+LFLAGS        = -g -rdynamic
 LIBS          = $(SUBLIBS) -L/home/yh/project/viabtc_exchange_server/readhistory/../utils -lutils -L/home/yh/project/viabtc_exchange_server/readhistory/../network/ -lnetwork -Wl,-Bstatic -lev -ljansson -lmpdec -lmysqlclient -lz -lhiredis -Wl,-Bdynamic -lm -lpthread -ldl 
 AR            = ar cqs
 RANLIB        = 

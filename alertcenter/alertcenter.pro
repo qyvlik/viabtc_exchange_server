@@ -9,8 +9,7 @@ TARGET = alertcenter.exe
 
 TEMPLATE = app
 
-LIBS += -L$$OUT_PWD/../utils -lutils
-LIBS += -L$$OUT_PWD/../network/ -lnetwork -Wl,-Bstatic
+LIBS += -L$$OUT_PWD/../utils -lutils -L$$OUT_PWD/../network/ -lnetwork -Wl,-Bstatic
 LIBS += -lev -lhiredis -ljansson -lmpdec -lcurl -lssl -lcrypto -Wl,-Bdynamic -lm
 
 INCLUDEPATH = \

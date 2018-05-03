@@ -20,3 +20,9 @@ DEFINES = \
    $$PWD/README.md \
    $$PWD/_makefile.inc
 
+## matchengine
+## readhistory
+## alertcenter
+## accesshttp
+## accessws
+## marketprice

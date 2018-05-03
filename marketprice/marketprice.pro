@@ -8,8 +8,8 @@ CONFIG -= qt
 TARGET = marketprice.exe
 TEMPLATE = app
 
-LIBS += -L$$OUT_PWD/../utils -lutils
-LIBS += -L$$OUT_PWD/../network/ -lnetwork -Wl,-Bstatic
+
+LIBS += -L$$OUT_PWD/../utils -lutils -L$$OUT_PWD/../network/ -lnetwork -Wl,-Bstatic
 LIBS += -lev -ljansson -lmpdec -lrdkafka -lz -llz4 -lssl -lcrypto -lhiredis -Wl,-Bdynamic -lm -lpthread -ldl -lcurl -lstdc++
 
 INCLUDEPATH = \

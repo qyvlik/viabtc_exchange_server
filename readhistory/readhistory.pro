@@ -8,11 +8,10 @@ CONFIG -= qt
 TARGET = readhistory.exe
 TEMPLATE = app
 
-#QMAKE_CFLAGS += -Wall -Wno-strict-aliasing -Wno-uninitialized -g -rdynamic -std=gnu99
-#QMAKE_LFLAGS += -g -rdynamic
+QMAKE_CFLAGS += -Wall -Wno-strict-aliasing -Wno-uninitialized -g -rdynamic -std=gnu99
+QMAKE_LFLAGS += -g -rdynamic
 
-LIBS += -L$$OUT_PWD/../utils -lutils
-LIBS += -L$$OUT_PWD/../network/ -lnetwork -Wl,-Bstatic
+LIBS += -L$$OUT_PWD/../utils -lutils -L$$OUT_PWD/../network/ -lnetwork -Wl,-Bstatic
 LIBS += -lev -ljansson -lmpdec
 LIBS += -lmysqlclient -lz
 LIBS += -lhiredis -Wl,-Bdynamic
