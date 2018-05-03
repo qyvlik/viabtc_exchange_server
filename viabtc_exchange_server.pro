@@ -18,5 +18,5 @@ SUBDIRS *= \
 DEFINES = \
    $$PWD/LICENSE \
    $$PWD/README.md \
-   $$PWD/makefile.inc
+   $$PWD/_makefile.inc
 
