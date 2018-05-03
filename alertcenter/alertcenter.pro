@@ -9,7 +9,9 @@ TARGET = alertcenter.exe
 
 TEMPLATE = app
 
-LIBS = -L ../utils -lutils -L ../network -lnetwork -Wl,-Bstatic -lev -lhiredis -ljansson -lmpdec -lcurl -lssl -lcrypto -Wl,-Bdynamic -lm
+LIBS += -L/home/yh/project/viabtc_exchange_server/utils -lutils.a
+LIBS += -L/home/yh/project/viabtc_exchange_server/network -lnetwork.a -Wl,-Bstatic
+LIBS += -lev -lhiredis -ljansson -lmpdec -lcurl -lssl -lcrypto -Wl,-Bdynamic -lm
 
 HEADERS = \
    $$PWD/ac_config.h \

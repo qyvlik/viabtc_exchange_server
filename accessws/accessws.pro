@@ -9,7 +9,9 @@ TARGET = accessws.exe
 
 TEMPLATE = app
 
-LIBS = -L ../utils -lutils -L ../network -lnetwork -Wl,-Bstatic -lev -ljansson -lmpdec -lrdkafka -lz -lssl -lcrypto -lhiredis -lcurl -Wl,-Bdynamic -lm -lpthread -ldl
+LIBS += -L/home/yh/project/viabtc_exchange_server/utils -lutils.a
+LIBS += -L/home/yh/project/viabtc_exchange_server/network -lnetwork.a -Wl,-Bstatic
+LIBS += -lev -ljansson -lmpdec -lrdkafka -lz -lssl -lcrypto -lhiredis -lcurl -Wl,-Bdynamic -lm -lpthread -ldl
 
 HEADERS = \
    $$PWD/aw_asset.h \

@@ -9,7 +9,7 @@ TARGET = network.a
 
 TEMPLATE = lib
 
-LIBS += -L /usr/local/lib -lev
+LIBS += -lev
 
 include(./network.pri)
 

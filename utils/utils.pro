@@ -9,7 +9,8 @@ TARGET = utils.a
 
 TEMPLATE = lib
 
-LIBS += -L /usr/local/opt/openssl/ -lssl -L /usr/local/lib -lev
+LIBS += -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lpthread -lrt -lz -ldl -lm
+LIBS += -lssl -lrdkafka
 
 include(./utils.pri)
 

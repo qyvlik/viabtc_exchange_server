@@ -8,7 +8,9 @@ CONFIG -= qt
 TARGET = marketprice.exe
 TEMPLATE = app
 
-LIBS = -L ../utils -lutils -L ../network -lnetwork -Wl,-Bstatic -lev -ljansson -lmpdec -lrdkafka -lz -llz4 -lssl -lcrypto -lhiredis -Wl,-Bdynamic -lm -lpthread -ldl -lcurl -lstdc++
+LIBS += -L/home/yh/project/viabtc_exchange_server/utils -lutils.a
+LIBS += -L/home/yh/project/viabtc_exchange_server/network -lnetwork.a -Wl,-Bstatic
+LIBS += -lev -ljansson -lmpdec -lrdkafka -lz -llz4 -lssl -lcrypto -lhiredis -Wl,-Bdynamic -lm -lpthread -ldl -lcurl -lstdc++
 
 HEADERS = \
    $$PWD/mp_config.h \

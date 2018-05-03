@@ -8,7 +8,12 @@ CONFIG -= qt
 TARGET = matchengine.exe
 TEMPLATE = app
 
-LIBS = -L ../utils -lutils -L ../network -lnetwork -Wl,-Bstatic -lev -ljansson -lmpdec -lmysqlclient -lz -lrdkafka -lssl -lcrypto -lhiredis -Wl,-Bdynamic -lm -lpthread -ldl
+LIBS += -L/home/yh/project/viabtc_exchange_server/utils -lutils.a
+LIBS += -L/home/yh/project/viabtc_exchange_server/network -lnetwork.a -Wl,-Bstatic
+LIBS += -lev -ljansson -lmpdec
+LIBS += -lmysqlclient -lz
+LIBS += -lrdkafka -lssl -lcrypto -lhiredis -Wl,-Bdynamic
+LIBS += -lm -lpthread -ldl
 
 HEADERS = \
    $$PWD/me_balance.h \
@@ -44,9 +49,20 @@ SOURCES = \
 INCLUDEPATH = \
     $$PWD/. \
     $$PWD/../network \
-    $$PWD/../utils
+    $$PWD/../utils \
+    /usr/include/mysql
 
 DISTFILES = \
    $$PWD/restart.sh \
    $$PWD/config.json \
    $$PWD/_makefile
+
+QMAKE_CFLAGS += -Wall -Wno-strict-aliasing -Wno-uninitialized -g -rdynamic -std=gnu99
+
+QMAKE_LFLAGS += -g -rdynamic
+
+
+#unix:!macx: LIBS += -L$$OUT_PWD/../network/ -lnetwork.a
+
+#INCLUDEPATH += $$PWD/../network
+#DEPENDPATH += $$PWD/../network
