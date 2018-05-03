@@ -24,15 +24,17 @@
     },
     "cli": "tcp@127.0.0.1:7317",
     "db_log": {
-        "host": "localhost",
-        "user": "user",
-        "pass": "pass",
+        "host": "127.0.0.1",
+        "port": 13306,
+        "user": "root",
+        "pass": "root",
         "name": "trade_log"
     },
     "db_history": {
-        "host": "localhost",
-        "user": "user",
-        "pass": "pass",
+        "host": "127.0.0.1",
+        "port": 13306,
+        "user": "root",
+        "pass": "root",
         "name": "trade_history"
     },
     "assets": [
@@ -150,7 +152,7 @@
             "min_amount": "0.001"
         }
     ],
-    "brokers": "127.0.0.1:9092",
+    "brokers": "127.0.0.1:19092",
     "slice_interval": 3600,
     "slice_keeptime": 259200 
 }

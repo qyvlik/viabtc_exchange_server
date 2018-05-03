@@ -5,12 +5,17 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-TARGET = utils.a
+TARGET = utils
 
 TEMPLATE = lib
 
-LIBS += -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lpthread -lrt -lz -ldl -lm
+LIBS += -lmysqlclient -lpthread -lrt -lz -ldl -lm
 LIBS += -lssl -lrdkafka
+
+INCLUDEPATH += \
+    $$PWD/../network \
+    /usr/local/opt/openssl/include \
+    /usr/local/include
 
 include(./utils.pri)
 

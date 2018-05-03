@@ -10,7 +10,6 @@ SUBDIRS *= \
     accessws \
     alertcenter \
     readhistory \
-#    depends/hiredis \
     marketprice \
     matchengine \
     utils \

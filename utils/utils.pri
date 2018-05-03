@@ -57,11 +57,8 @@ SOURCES = \
    $$PWD/ut_title.c \
    $$PWD/ut_ws_svr.c
 
-INCLUDEPATH = \
-    $$PWD/. \
-    $$PWD/../network \
-    /usr/local/opt/openssl/include \
-    /usr/local/include
+INCLUDEPATH += \
+    $$PWD/.
 
 
 

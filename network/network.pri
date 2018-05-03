@@ -23,7 +23,6 @@ SOURCES = \
    $$PWD/nw_svr.c \
    $$PWD/nw_timer.c
 
-INCLUDEPATH = \
-    $$PWD/. \
-    /usr/local/include
+INCLUDEPATH += \
+    $$PWD/.
 

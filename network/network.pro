@@ -5,11 +5,14 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-TARGET = network.a
+TARGET = network
 
 TEMPLATE = lib
 
 LIBS += -lev
+
+INCLUDEPATH += \
+    /usr/local/include
 
 include(./network.pri)
 

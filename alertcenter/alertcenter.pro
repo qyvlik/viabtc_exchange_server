@@ -9,23 +9,15 @@ TARGET = alertcenter.exe
 
 TEMPLATE = app
 
-LIBS += -L/home/yh/project/viabtc_exchange_server/utils -lutils.a
-LIBS += -L/home/yh/project/viabtc_exchange_server/network -lnetwork.a -Wl,-Bstatic
+LIBS += -L$$OUT_PWD/../utils -lutils
+LIBS += -L$$OUT_PWD/../network/ -lnetwork -Wl,-Bstatic
 LIBS += -lev -lhiredis -ljansson -lmpdec -lcurl -lssl -lcrypto -Wl,-Bdynamic -lm
 
-HEADERS = \
-   $$PWD/ac_config.h \
-   $$PWD/ac_server.h
-
-SOURCES = \
-   $$PWD/ac_config.c \
-   $$PWD/ac_main.c \
-   $$PWD/ac_server.c
-
 INCLUDEPATH = \
-    $$PWD/. \
     $$PWD/../network \
     $$PWD/../utils
+
+include(./alertcenter.pri)
 
 DISTFILES = \
    $$PWD/_makefile \
