@@ -23,7 +23,8 @@ static nw_timer timer;
 static void on_delivery(rd_kafka_t *rk, const rd_kafka_message_t *rkmessage, void *opaque)
 {
     if (rkmessage->err) {
-        log_fatal("Message delivery failed: %s", rd_kafka_err2str(rkmessage->err));
+        log_fatal("Message delivery failed: topic:%s %s", rd_kafka_topic_name(rkmessage->rkt), 
+                  rd_kafka_err2str(rkmessage->err));
     } else {
         log_trace("Message delivered (topic: %s, %zd bytes, partition %"PRId32")",
                 rd_kafka_topic_name(rkmessage->rkt), rkmessage->len, rkmessage->partition);
