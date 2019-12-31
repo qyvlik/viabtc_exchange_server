@@ -79,15 +79,18 @@ matchengine
 
 ## API
 
-[HTTP Protocol](https://github.com/viabtc/viabtc_exchange_server/wiki/HTTP-Protocol) and [Websocket Protocol](https://github.com/viabtc/viabtc_exchange_server/wiki/WebSocket-Protocol) documents are available in Chinese. Should time permit, we will have it translated into English in the future.</br>
-[Python3 API realisation](https://github.com/grumpydevelop/viabtc_exchange_server_tools/blob/master/api/api_exchange.py)
+[HTTP Protocol](https://github.com/viabtc/viabtc_exchange_server/wiki/HTTP-Protocol) and [Websocket Protocol](https://github.com/viabtc/viabtc_exchange_server/wiki/WebSocket-Protocol) documents are available in Chinese. Should time permit, we will have it translated into English in the future.
 
+### Third-party Clients
+
+- [Python3 API realisation](https://github.com/testnet-exchange/python-viabtc-api)
+- [Ruby Gem 💎](https://github.com/krmbzds/viabtc)
 
 ## Websocket authorization
 
 The websocket protocol has an authorization method (`server.auth`) which is used to authorize the websocket connection to subscribe to user specific events (trade and balance events).
 
-To accomodate this method your exchange frontend will need to supply an internal endpoint which takes an authorization token from the HTTP header named `Authorization` and validates that token and returns the user_id.
+To accommodate this method your exchange frontend will need to supply an internal endpoint which takes an authorization token from the HTTP header named `Authorization` and validates that token and returns the user_id.
 
 The internal authorization endpoint is defined by the `auth_url` setting in the config file (`accessws/config.json`).
 
@@ -95,7 +98,6 @@ Example response: `{"code": 0, "message": null, "data": {"user_id": 1}}`
 
 ## Donation
 
-* BTC: 14x3GrEoMLituT6vF2wcEbqMAxCvt2724s
-* BCC: 1364ZurPv8uTgnFr1uqowJDFF15aNFemkf
-* ETH: 0xA2913166AE0689C07fCB5C423559239bB2814b6D
+* BTC/BCH: 1LB34q942fRN8ukMoaLJNWBjm5erZccgUb
+* ETH: 0xd6938fcad9aa20de7360ce15090ec2e036867f27
 
